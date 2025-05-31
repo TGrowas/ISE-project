@@ -1,18 +1,18 @@
 import java.util.Scanner;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.*;
-public class Menu   
+public class MENU   
 {
    public static void main(String[] args)
     {
         TimeConverter t = new TimeConverter();
         SeasonDeterminer s = new SeasonDeterminer();
-        //Season ss = new Season();
         Scanner sc = new Scanner(System.in);
-        int choice;
-        String source_cty,target_cty,time;
-        String cty;
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String choice;
+        String source_cty,target_cty,time,resultTime;
+        String cty,input,resultSeason;
+        DateTimeFormatter seasonFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate date;
         do 
         {
@@ -21,46 +21,40 @@ public class Menu
             System.out.println("2. Determine Current Season");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
-            choice = sc.nextInt();
+            choice = sc.next();
 
             switch (choice) 
             {
-                case 1:
+                case "1":
                     System.out.print("\nEnter source country: ");
                     source_cty = sc.next();
                     System.out.print("\nEnter target country: ");
                     target_cty = sc.next();
                     System.out.print("\nEnter local time (HH:mm)): ");
                     time = sc.next();
-                    System.out.println(t.convertTime(source_cty,target_cty,time));
-                    //do validation
+                    resultTime = t.convertTime(source_cty,target_cty,time);
+                    System.out.println(resultTime);
                     break;
                     
-               // case 2:
-                   //System.out.print("\nEnter country: ");
-                   //cty = sc.next();
-                   //System.out.print("\nCurrent date(YY/MM/DD): ");
-                    //date = LocalDate.parse(input);
-                    //s.determineSeason(cty,date);
-                  //  String date = sc.nextLine();
-                   // s.determineSeason(cty,date);
-                   // break;
-                case 2:
+               
+                case "2":
                     System.out.print("\nEnter country: ");
                     cty = sc.next();
-                    System.out.println("Enter current date(YYYY-MM-DD): ");
-                    String dateStr = sc.nextLine().trim();
+                    System.out.print("Enter current date(YYYY-MM-DD): ");
+                    input = sc.next();
                     try
                     {
-                        date = LocalDate.parse(dateStr,formatter);
-                        System.out.println(s.determineSeason(cty,date));
+                        date = LocalDate.parse(input, seasonFormatter);
+                        resultSeason = s.determineSeason(cty,date);
+                        System.out.println(resultSeason);
+                        
                     }catch(DateTimeParseException e)
                     {
                         System.out.println("Invalid date format. Please use YYYY-MM--DD.");
                     }
                     break;
                 
-                case 3:
+                case "3":
                     System.out.println("\nGoodbye!");
                     break;
          
@@ -68,7 +62,7 @@ public class Menu
                     System.out.println("\nInvalid choice! Please try again.");
                     break;
             }
-        } while(choice != 3);
+        } while(choice != "3" );
         
         sc.close();
     } 
