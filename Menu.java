@@ -30,10 +30,10 @@ public class MENU
                     source_cty = sc.next();
                     System.out.print("\nEnter target country: ");
                     target_cty = sc.next();
-                    System.out.print("\nEnter local time (HH:mm)): ");
+                    System.out.print("\nEnter local time (HH:mm): ");
                     time = sc.next();
                     resultTime = t.convertTime(source_cty,target_cty,time);
-                    System.out.println(resultTime);
+                    System.out.println("\n" + resultTime);
                     break;
                     
                
@@ -46,7 +46,7 @@ public class MENU
                     {
                         date = LocalDate.parse(input, seasonFormatter);
                         resultSeason = s.determineSeason(cty,date);
-                        System.out.println(resultSeason);
+                        System.out.println("\n" + resultSeason);
                         
                     }catch(DateTimeParseException e)
                     {
