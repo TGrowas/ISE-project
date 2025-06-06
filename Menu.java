@@ -50,7 +50,7 @@ public class MENU
                         
                     }catch(DateTimeParseException e)
                     {
-                        System.out.println("Invalid date format. Please use YYYY-MM--DD.");
+                        System.out.println("Invalid date format. Please use YYYY-MM-DD.");
                     }
                     break;
                 
