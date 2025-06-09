@@ -21,27 +21,33 @@ public class SeasonDeterminer {
 
         if (isSouthern) {
             if ((month == 12 && day >= 21) || (month == 1) || (month == 2) || (month == 3 && day <= 19)) {
-                season = "Summer ☀️";
+                season = "Summer";
             } else if ((month == 3 && day >= 20) || (month == 4) || (month == 5) || (month == 6 && day <= 19)) {
-                season = "Fall 🍂";
+                season = "Fall";
             } else if ((month == 6 && day >= 20) || (month == 7) || (month == 8) || (month == 9 && day <= 21)) {
-                season = "Winter ❄️";
+                season = "Winter";
             } else {
-                season = "Spring 🌸";
+                season = "Spring";
             }
         } else {
             if ((month == 12 && day >= 21) || (month == 1) || (month == 2) || (month == 3 && day <= 19)) {
-                season = "Winter ❄️";
+                season = "Winter";
             } else if ((month == 3 && day >= 20) || (month == 4) || (month == 5) || (month == 6 && day <= 19)) {
-                season = "Spring 🌸";
+                season = "Spring";
             } else if ((month == 6 && day >= 20) || (month == 7) || (month == 8) || (month == 9 && day <= 21)) {
-                season = "Summer ☀️";
+                season = "Summer";
             } else {
-                season = "Fall 🍂";
+                season = "Fall";
             }
         }
         
-        return country + " is in the " + (isSouthern ? "Southern" : "Northern") + " Hemisphere.\n"
-             + "Current season in " + country + ": " + season;
+        return season;
+
+
+
+
+        //user interface
+        //return country + " is in the " + (isSouthern ? "Southern" : "Northern") + " Hemisphere.\n"
+            // + "Current season in " + country + ": " + season;
     }
 }
