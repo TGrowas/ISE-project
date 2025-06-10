@@ -26,7 +26,9 @@ public class Menu
             switch (choice) 
             {
                 case "1":
-                    System.out.print("\nEnter source country: ");
+                
+                    try{
+                        System.out.print("\nEnter source country: ");
                     source_cty = sc.next();
                     System.out.print("\nEnter target country: ");
                     target_cty = sc.next();
@@ -34,6 +36,10 @@ public class Menu
                     time = sc.next();
                     resultTime = t.convertTime(source_cty,target_cty,time);
                     System.out.println("\n" + resultTime);
+                    }catch(Exception e)
+                    {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                     
                
