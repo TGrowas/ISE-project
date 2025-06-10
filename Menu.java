@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.*;
-public class MENU   
+public class Menu   
 {
    public static void main(String[] args)
     {

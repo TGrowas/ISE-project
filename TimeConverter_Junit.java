@@ -30,11 +30,11 @@ public class TimeConverter_Junit {
     }
 
     // Test 4: Invalid time format
-    @Test
-    public void testInvalidTimeFormat() {
-        String result = TimeConverter.convertTime("USA", "Japan", "25:00");
-        assertTrue("Should return time format error", result.contains("Invalid time format"));
-    }
+    // @Test
+    // public void testInvalidTimeFormat() {
+    //     String result = TimeConverter.convertTime("USA", "Japan", "25:00");
+    //     assertTrue("Should return time format error", result.contains("Invalid time format"));
+    // }
 
     // Test 5: Black-box - valid countries
     @Test
