@@ -22,6 +22,19 @@ public class MenuTest_Junit {
         String output = capOut.toString();
         assertTrue("Test for input is Double data type ",output.contains("Invalid choice! Please try again."));
     }
+
+     @Test
+    public void testInvalidNegativeMenuChoice() {
+        
+        ByteArrayOutputStream capOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(capOut));
+
+        System.setIn(new ByteArrayInputStream("-1\n3".getBytes()));
+        Menu.main(new String[]{});
+
+        String output = capOut.toString();
+        assertTrue("Test for input is Negative number ",output.contains("Invalid choice! Please try again."));
+    }
      @Test
     public void testValidTimeConverter() {
         
@@ -48,6 +61,7 @@ public class MenuTest_Junit {
         assertTrue("Test for Invalid Time",output.contains("Text '25:00' could not be parsed: Invalid value for HourOfDay (valid values 0 - 23): 25"));
     }
 
+    @Test
     public void testInValidCountryTimeConverter() {
         
         ByteArrayOutputStream capOut = new ByteArrayOutputStream();
@@ -59,14 +73,34 @@ public class MenuTest_Junit {
         String output = capOut.toString();
         assertTrue("Test for Invalid Country Name",output.contains("Invalid country name."));
     }
-    
 
     @Test
-    public void testValidTimeConversion(){
-        String input = "1\nUSA\nJapan\n13:00\n3\n";
-        String output = runMenuWithInput(input);
-        assertTrue(output.contains("Converted time in Japan"));
+    public void testSeasonDeterminer() {
+        
+        ByteArrayOutputStream capOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(capOut));
+
+        System.setIn(new ByteArrayInputStream("2\nAustralia\n2025-01-15\n3".getBytes()));
+        Menu.main(new String[]{});
+
+        String output = capOut.toString();
+        assertTrue("Test for Season Determiner",output.contains("Current season in Australia: Summer"));
     }
+
+    @Test
+    public void testInvalidDateSeasonDeterminer() {
+        
+        ByteArrayOutputStream capOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(capOut));
+
+        System.setIn(new ByteArrayInputStream("2\nAustralia\n2025-13-01\n3".getBytes()));
+        Menu.main(new String[]{});
+
+        String output = capOut.toString();
+        assertTrue("Test for Invalid Date in Season Determiner",output.contains("Invalid date format. Please use YYYY-MM-DD."));
+    }
+
+
 
     
 
