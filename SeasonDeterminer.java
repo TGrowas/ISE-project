@@ -40,7 +40,15 @@ public class SeasonDeterminer {
                 season = "Fall";
             }
         }
-        
+        if(isSouthern == true)
+        {
+            System.out.println(country + " is in the Southern Hemisphere");
+        }
+        else
+        {
+            System.out.println(country + "is in the Northern Hemisphere");
+        }
+        System.out.println("Current season in " + country + ": " + season);
         return season;
 
 
