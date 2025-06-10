@@ -20,7 +20,7 @@ public class MenuTest_Junit {
         Menu.main(new String[]{});
 
         String output = capOut.toString();
-        asserTrue("Test for input is Double data type ",output.contains("Invalid choice! Please try again."));
+        assertTrue("Test for input is Double data type ",output.contains("Invalid choice! Please try again."));
     }
      @Test
     public void testValidTimeConverter() {
@@ -32,8 +32,34 @@ public class MenuTest_Junit {
         Menu.main(new String[]{});
 
         String output = capOut.toString();
-        asserTrue("Test for Time Converter is work ",output.contains("Invalid choice! Please try again."));
+        assertTrue("Test for Time Converter is work ",output.contains("Converted time in Japan: 02:00"));
     }
+
+     @Test
+    public void testInValidTimeTimeConverter() {
+        
+        ByteArrayOutputStream capOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(capOut));
+
+        System.setIn(new ByteArrayInputStream("1\nUSA\nJapan\n25:00\n3".getBytes()));
+        Menu.main(new String[]{});
+
+        String output = capOut.toString();
+        assertTrue("Test for Invalid Time",output.contains("Text '25:00' could not be parsed: Invalid value for HourOfDay (valid values 0 - 23): 25"));
+    }
+
+    public void testInValidCountryTimeConverter() {
+        
+        ByteArrayOutputStream capOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(capOut));
+
+        System.setIn(new ByteArrayInputStream("1\nusa\nJapan\n25:00\n3".getBytes()));
+        Menu.main(new String[]{});
+
+        String output = capOut.toString();
+        assertTrue("Test for Invalid Country Name",output.contains("Invalid country name."));
+    }
+    
 
     @Test
     public void testValidTimeConversion(){

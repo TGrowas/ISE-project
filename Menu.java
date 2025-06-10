@@ -52,7 +52,6 @@ public class Menu
                     {
                         date = LocalDate.parse(input, seasonFormatter);
                         resultSeason = s.determineSeason(cty,date);
-                        System.out.println("\n" + resultSeason);
                         
                     }catch(DateTimeParseException e)
                     {
