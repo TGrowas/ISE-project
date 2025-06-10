@@ -67,7 +67,7 @@ public class Menu
                     System.out.println("\nInvalid choice! Please try again.");
                     break;
             }
-        } while(choice != "3" );
+        } while(!choice.equals("3"));
         
         sc.close();
     } 

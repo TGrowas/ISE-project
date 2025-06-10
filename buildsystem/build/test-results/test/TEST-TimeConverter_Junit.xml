@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TimeConverter_Junit" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-06-10T02:15:09" hostname="LAPTOP-SCJJ0NS2" time="0.017">
+<testsuite name="TimeConverter_Junit" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-06-10T03:32:13" hostname="LAPTOP-SCJJ0NS2" time="0.002">
   <properties/>
-  <testcase name="testBlackBoxValidInput" classname="TimeConverter_Junit" time="0.014"/>
-  <testcase name="testValidConversion" classname="TimeConverter_Junit" time="0.002"/>
+  <testcase name="testBlackBoxValidInput" classname="TimeConverter_Junit" time="0.001"/>
+  <testcase name="testValidConversion" classname="TimeConverter_Junit" time="0.0"/>
   <testcase name="testInvalidSourceCountry" classname="TimeConverter_Junit" time="0.0"/>
   <testcase name="testBlackBoxInvalidSource" classname="TimeConverter_Junit" time="0.0"/>
-  <testcase name="testInvalidTargetCountry" classname="TimeConverter_Junit" time="0.0"/>
+  <testcase name="testInvalidTargetCountry" classname="TimeConverter_Junit" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

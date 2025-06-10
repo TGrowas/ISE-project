@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MenuTest_Junit" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-06-10T03:32:13" hostname="LAPTOP-SCJJ0NS2" time="0.026">
+  <properties/>
+  <testcase name="testValidTimeConverter" classname="MenuTest_Junit" time="0.021"/>
+  <testcase name="testSeasonDeterminer" classname="MenuTest_Junit" time="0.002"/>
+  <testcase name="testInValidCountryTimeConverter" classname="MenuTest_Junit" time="0.0"/>
+  <testcase name="testInValidTimeTimeConverter" classname="MenuTest_Junit" time="0.001"/>
+  <testcase name="testInvalidNegativeMenuChoice" classname="MenuTest_Junit" time="0.0"/>
+  <testcase name="testInvalidDoubleMenuChoice" classname="MenuTest_Junit" time="0.0"/>
+  <testcase name="testInvalidDateSeasonDeterminer" classname="MenuTest_Junit" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

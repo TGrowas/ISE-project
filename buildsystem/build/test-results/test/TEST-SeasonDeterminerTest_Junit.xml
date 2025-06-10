@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SeasonDeterminerTest_Junit" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-06-10T02:15:09" hostname="LAPTOP-SCJJ0NS2" time="0.005">
+<testsuite name="SeasonDeterminerTest_Junit" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-06-10T03:32:13" hostname="LAPTOP-SCJJ0NS2" time="0.0">
   <properties/>
-  <testcase name="testSouthernHemisphereSpring" classname="SeasonDeterminerTest_Junit" time="0.004"/>
+  <testcase name="testSouthernHemisphereSpring" classname="SeasonDeterminerTest_Junit" time="0.0"/>
   <testcase name="testSouthernHemisphereSummer" classname="SeasonDeterminerTest_Junit" time="0.0"/>
   <testcase name="testSouthernHemisphereFall" classname="SeasonDeterminerTest_Junit" time="0.0"/>
   <testcase name="testNorthernHemisphereWinter" classname="SeasonDeterminerTest_Junit" time="0.0"/>
